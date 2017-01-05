@@ -1,0 +1,63 @@
+// @import url(https://fonts.googleapis.com/css?family=Droid+Serif)
+// @import url(https://fonts.googleapis.com/css?family=Karla:400,700,400italic)
+// @import url(https://fonts.googleapis.com/css?family=Karla:400,700,400italic)
+/**
+ * Main HTML Body resets and spacial definitions
+ */
+
+*, *:before, *:after
+  box-sizing border-box
+
+*:focus
+  outline none
+
+html
+  font-family Karla, serif
+  font-size _base-font-size
+  +widescreen()
+    font-size 24px
+  +desktop()
+    font-size 19px
+  +tablet()
+    font-size 14px
+  +mobile-landscape()
+    font-size 12px
+
+body
+  background-color #000 // $black--matt
+  background-repeat repeat
+  // background-image url($data--stripes)
+  color white
+
+ul, li
+  zero()
+  list-style none
+ul
+  font-size 0
+li
+  font-size 1rem
+a 
+  color $blue--flat
+  text-decoration none
+  +over($red--flat)
+    text-decoration underline
+
+.links
+  li
+    margin .5em 0
+    display block
+    a
+      color $red--flat
+
+h1,h2,h3,h4,h5,h6
+  font-family _head-font-family
+
+.undertab
+  position relative
+  font-weight normal
+  margin-bottom 1.5em
+  +after()
+    width 2.5em
+    top .25em
+    left 0
+    border-bottom .1em solid $red--base

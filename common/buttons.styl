@@ -1,0 +1,108 @@
+/**
+ * Icon specifics
+ */
+
+#Back, #X, #Poi, #Zoom_In, #Page, #Search, #Arrow_L, #Arrow_R, #Down, #Exit, #Info, #More, #Play, #Up, #Home, #Star, #SplitView, #History, #Fullscreen, #IcoMap
+  path, circle, line, g
+    fill none
+    stroke white
+    stroke-width 4px
+  .opaque
+    fill $soften  
+#Poi
+  .outer-point
+    fill $red--base
+    stroke transparent
+  .center-point
+    fill transparent
+    stroke transparent
+
+#help2
+  stroke white
+  stroke-width .05em
+
+#ellipsis, #help, #skip-forward, #location-2, #image, #pie-graph, #map, #paper, #arrow-left, #cross, #expand, #columns, #file, #clock, #eye, #drop, #link, #location, #box, #reload, #home, #play, #sarcophagus, #download, #carot-up, #carot-down, #help2, #next, #maximize
+  fill white
+  path
+    fill white
+
+/**
+ * Buttons
+ */
+[class^="btn-"]
+  font-weight bold
+  text-align center
+  cursor pointer
+  user-select none
+  color $white--flat
+  font-size 1em
+  font-weight 100
+  padding .25em
+  transition all _speed--fast
+  &.v--blue
+    transition background-color _speed--fast
+    color white    
+    // border 4px solid white
+    border .125em solid white
+  &.v--red
+    background-color $lighter
+    color $black--matt
+    // background-color $red--flat
+    border 1px solid $red--flat
+  &.v--grey
+    background-color $lighter
+    color $black--matt
+    // background-color $grey--flat
+    border 1px solid $grey--flat
+  &:hover
+    background-color $darkest
+    // color $white--flat
+  .btn_title
+    display block
+
+.badge-btn
+  user-select none
+  font-family Droid
+  font-weight bold
+  color $red--base
+  font-size .88em
+  margin-bottom 2em
+  text-align right
+  span
+    padding .25em 1.5em
+    cursor pointer
+    border 1px solid $red--base    
+
+.btn-large
+  user-select none
+  font-size 1.25em
+  padding .5em 1.5em
+  .btn_icon
+    display inline-block
+    vertical-align middle
+    margin-right 1em
+    .icon
+      wh(2em,2em)
+      svg
+        wh(100%,100%)
+    #play
+      fill $black--matt
+  .btn_title
+    display inline-block
+
+icon()
+  user-select none
+  padding .75em
+  cursor pointer
+  border 1px solid transparent
+  border-radius 50%
+  .icon_dimensions
+    wh(1em,1em)
+    svg
+      wh(100%,100%)
+
+.page--close
+  position absolute
+  top 4.5em
+  right 6em
+  icon()
